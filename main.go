@@ -74,9 +74,9 @@ func main() {
 
     var wg sync.WaitGroup
 
-    sem := semaphore.NewWeighted(400)
+    sem := semaphore.NewWeighted(100)
     client := &fasthttp.Client{
-        MaxConnsPerHost: 400,
+        MaxConnsPerHost: 100,
     }
 
     for scanner.Scan() {
